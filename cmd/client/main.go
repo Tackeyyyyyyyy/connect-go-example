@@ -16,7 +16,7 @@ func main() {
 		http.DefaultClient,
 		"http://localhost:8080",
 	)
-	res, err := client.Greet(
+	res := client.Greet(
 		context.Background(),
 		connect.NewRequest(&greetv1.GreetRequest{Name: "Jane"}),
 	)
